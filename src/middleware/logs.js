@@ -1,6 +1,6 @@
-const logReq = (req,res, next ) =>{
-    console.log('Terjadi request ke PATH', req.path)
-    next()
+const logRequest = (req, res, next) => {
+    console.log('Terjadi request ke PATH: ', req.path);
+    next();
 }
 
-module.exports = logReq
+module.exports = logRequest;
