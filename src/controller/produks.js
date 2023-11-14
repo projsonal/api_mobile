@@ -40,6 +40,32 @@ const createNewProduks = async (req, res) => {
     }
 }
 
+const detailProduk = async (req, res) => {
+    const { idProduk } = req.params;
+
+    try {
+        const data = await UsersModel.getProdukById(idProduk);
+
+        if (!data) {
+            return res.status(404).json({
+                message: 'Produk tidak ditemukan',
+                data: null,
+            });
+        }
+
+        res.json({
+            message: 'GET detail produk success',
+            data: data,
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: 'Server Error',
+            serverMessage: error,
+        });
+    }
+};
+
+
 const updateProduks = async (req, res) => {
     const {idProduks} = req.params;
     const {body} = req;
@@ -79,6 +105,7 @@ const deleteProduks = async (req, res) => {
 module.exports = {
     getAllProduks,
     createNewProduks,
+    detailProduk,
     updateProduks,
     deleteProduks,
 }

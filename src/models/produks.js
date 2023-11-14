@@ -13,6 +13,11 @@ const createNewProduks = (body) => {
     return dbPool.execute(SQLQuery);
 }
 
+const getProdukById = (idProduk) => {
+    const SQLQuery = `SELECT * FROM produk WHERE id =${idProduk}`;
+    return dbPool.execute(SQLQuery, [idProduk]);
+};
+
 const updateProduks = (body, idProduk) => {
     const SQLQuery = `  UPDATE produk
                         SET name='${body.kode_produk}', email='${body.nama_produk}', harga='${body.harga}' 
@@ -30,6 +35,7 @@ const deleteProduks = (idProduk) => {
 module.exports = {
     getAllUProduks,
     createNewProduks,
+    getProdukById,
     updateProduks,
     deleteProduks,
 }

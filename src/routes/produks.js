@@ -10,8 +10,11 @@ router.post('/', ProduksController.createNewProduks);
 // READ - GET
 router.get('/', ProduksController.getAllProduks);
 
+// READ - GET
+router.get('/:segment', ProduksController.detailProduk);
+
 // UPDATE - PATCH
-router.patch('/:idProduks', ProduksController.updateProduks);
+router.put('/:idProduks', ProduksController.updateProduks);
 
 // DELETE - DELETE
 router.delete('/:idProduks', ProduksController.deleteProduks);
