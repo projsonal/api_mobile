@@ -1,28 +1,12 @@
 {
   "name": "api_mobile",
   "version": "1.0.0",
-  "description": "API untuk repo promobile",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/projsonal/api_mobile.git"
-  },
-  "author": "muhammad-faisal-ashshidiq",
+  "main": "index.js",
+  "repository": "https://github.com/projsonal/api_mobile.git",
+  "author": "Muhammad Faisal A <sidiqfaisal30@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/projsonal/api_mobile/issues"
-  },
-  "homepage": "https://github.com/projsonal/api_mobile#readme",
   "dependencies": {
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.6.3"
-  },
-  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
