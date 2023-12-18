@@ -5,10 +5,10 @@ const UserController = require('../controller/users.js');
 const router = express.Router();
 
 // CREATE - POST
-router.post('/newUser', UserController.createNewUser);
+router.post('/newMember', UserController.createNewUser);
 
 // READ - GET
-router.get('/user', UserController.getAllUsers);
+router.get('/member', UserController.getAllUsers);
 
 // // UPDATE - PATCH
 // router.patch('/:idUser', UserController.updateUser);

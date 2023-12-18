@@ -1,14 +1,14 @@
 const dbPool = require('../config/database');
 
 const getAllTransaksiPembelian = () => {
-    const SQLQuery = 'SELECT * FROM transaksiPembelian';
+    const SQLQuery = 'SELECT * FROM transaksi_pembelian';
 
     return dbPool.execute(SQLQuery);
 }
 
 const createNewTransaksiPembelian = (body) => {
     const SQLQuery = `  
-        INSERT INTO TransaksiPembelian (nomorFaktur, kodeBarang, namaBarang, satuan, hargaSatuan, subTotal) 
+        INSERT INTO transaksi_pembelian (nomorFaktur, kodeBarang, namaBarang, satuan, hargaSatuan, subTotal) 
         VALUES ('${body.nomorFaktur}', '${body.kodeBarang}', '${body.namaBarang}', '${body.satuan}', '${body.hargaSatuan}', '${body.subTotal}')
     `;
 

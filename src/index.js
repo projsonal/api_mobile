@@ -14,7 +14,7 @@ app.use(middlewareLogRequest);
 app.use(express.json());
 app.use('/assets', express.static('public/images'))
 
-app.use('/users', usersRoutes);
+app.use('/member', usersRoutes);
 app.use('/produks', produksRoutes);
 // app.post('/upload',upload.single('photo'),(req, res,) => {
 //     res.json({
